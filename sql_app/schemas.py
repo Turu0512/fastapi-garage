@@ -36,6 +36,10 @@ class User(BaseModel):
     class Config:
         orm_mode = True
 
+class LoginUser(BaseModel):
+    username: str
+    password: str
+
 class SignupUser(User):
     user_id: int
     hashed_password: str
